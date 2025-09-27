@@ -63,13 +63,13 @@ public class Main extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -150,9 +150,6 @@ public class Main extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 260, 80));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\clkb.png")); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel6.setBackground(new java.awt.Color(51, 51, 51));
         jPanel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -248,6 +245,9 @@ public class Main extends javax.swing.JFrame {
 
         jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, -1, -1));
 
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/inner_main.jpg"))); // NOI18N
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 200));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 580));
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
@@ -300,7 +300,7 @@ public class Main extends javax.swing.JFrame {
         });
         jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 32, 820, 60));
 
-        jToggleButton1.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\finish.png")); // NOI18N
+        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/finish.png"))); // NOI18N
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
@@ -308,7 +308,7 @@ public class Main extends javax.swing.JFrame {
         });
         jPanel3.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 390, 30, 30));
 
-        jButton1.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\more.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/more.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -316,7 +316,7 @@ public class Main extends javax.swing.JFrame {
         });
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 230, 30, 30));
 
-        jButton2.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\plus-symbol-button.png")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/plus.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -324,7 +324,7 @@ public class Main extends javax.swing.JFrame {
         });
         jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 110, 30, 30));
 
-        jButton3.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\recycle-bin.png")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bin.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -332,7 +332,7 @@ public class Main extends javax.swing.JFrame {
         });
         jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 150, 30, 30));
 
-        jButton4.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\refresh.png")); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rotation.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -340,7 +340,7 @@ public class Main extends javax.swing.JFrame {
         });
         jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 190, 30, 30));
 
-        jButton5.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\check-mark.png")); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/check-mark.png"))); // NOI18N
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -348,7 +348,7 @@ public class Main extends javax.swing.JFrame {
         });
         jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 270, 30, 30));
 
-        jButton6.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\writing.png")); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/writing.png"))); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -356,7 +356,7 @@ public class Main extends javax.swing.JFrame {
         });
         jPanel3.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 350, 30, 30));
 
-        jButton7.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\close.png")); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cross.png"))); // NOI18N
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -364,7 +364,7 @@ public class Main extends javax.swing.JFrame {
         });
         jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 310, 30, 30));
 
-        jButton8.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\question.png")); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/question.png"))); // NOI18N
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -512,7 +512,7 @@ public class Main extends javax.swing.JFrame {
             }
             c.close();
             c = DriverManager.getConnection("jdbc:mysql://localhost:3306/task","root","1234");
-            sql = "update account set cmplted = ?,added = ? where username = ?";
+            sql = "update account set completed = ?,added = ? where username = ?";
             ptst = c.prepareStatement(sql);
             ptst.setInt(1,stat2);
             ptst.setString(3,user);

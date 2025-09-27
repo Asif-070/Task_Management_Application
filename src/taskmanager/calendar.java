@@ -143,7 +143,7 @@ public class calendar extends javax.swing.JFrame {
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 260, 80));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\clkb.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/inner_main.jpg"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel7.setBackground(new java.awt.Color(51, 51, 51));
@@ -366,7 +366,7 @@ public class calendar extends javax.swing.JFrame {
             PreparedStatement ptst = c.prepareStatement(sql);
             ptst.setString(1,dd);
             ResultSet rs = ptst.executeQuery();
-            
+
             DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
             model.setRowCount(0);
             while(rs.next()){
@@ -390,7 +390,7 @@ public class calendar extends javax.swing.JFrame {
         }
         catch(Exception e){
             e.printStackTrace();
-            
+
         }
         dd = f.format(d1);
         ddd = "Selected Date: " + dd;

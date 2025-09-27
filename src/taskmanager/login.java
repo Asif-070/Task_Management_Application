@@ -157,7 +157,7 @@ public class login extends javax.swing.JFrame {
         getContentPane().add(jPasswordField1);
         jPasswordField1.setBounds(600, 120, 260, 30);
 
-        jButton4.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\question.png")); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/question.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -175,7 +175,7 @@ public class login extends javax.swing.JFrame {
         getContentPane().add(jCheckBox1);
         jCheckBox1.setBounds(745, 150, 110, 20);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\background.jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/main_login.jpg"))); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, -20, 880, 460);
 

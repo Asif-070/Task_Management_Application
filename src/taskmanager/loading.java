@@ -65,7 +65,6 @@ public class loading extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         prog = new javax.swing.JProgressBar();
         jLabel2 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Loading page");
@@ -83,11 +82,8 @@ public class loading extends javax.swing.JFrame {
         prog.setStringPainted(true);
         getContentPane().add(prog, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 490, 380, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\hourglass.gif")); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 520));
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 630));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sand.gif"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 260, 480));
 
         pack();
         setLocationRelativeTo(null);
@@ -135,7 +131,6 @@ public class loading extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JProgressBar prog;
     // End of variables declaration//GEN-END:variables
 }

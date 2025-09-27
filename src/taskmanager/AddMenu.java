@@ -77,7 +77,6 @@ public class AddMenu extends javax.swing.JFrame {
         jSpinner1 = new javax.swing.JSpinner();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jSpinner2 = new javax.swing.JSpinner();
         jSpinner3 = new javax.swing.JSpinner();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -87,6 +86,7 @@ public class AddMenu extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jCheckBox1 = new javax.swing.JCheckBox();
+        jDateChooser = new com.toedter.calendar.JDateChooser();
 
         jLabel5.setText("jLabel5");
 
@@ -138,8 +138,6 @@ public class AddMenu extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Finish Time:");
 
-        jDateChooser1.setDateFormatString("yyyy-MM-dd");
-
         jSpinner2.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
 
         jSpinner3.setModel(new javax.swing.SpinnerNumberModel(0, 0, 59, 1));
@@ -148,7 +146,7 @@ public class AddMenu extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\timeup.jpg")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tempo.jpg"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 173));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -160,6 +158,8 @@ public class AddMenu extends javax.swing.JFrame {
 
         jCheckBox1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jCheckBox1.setText("Set as Anneversery");
+
+        jDateChooser.setDateFormatString("yyyyMMdd");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -190,7 +190,7 @@ public class AddMenu extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jSpinner3)
+                                .addComponent(jSpinner3, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -199,8 +199,8 @@ public class AddMenu extends javax.swing.JFrame {
                                 .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(8, 8, 8)
-                                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jDateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -220,7 +220,7 @@ public class AddMenu extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -273,10 +273,16 @@ public class AddMenu extends javax.swing.JFrame {
         if(!ta.equals("")){
             int pr = (int)jSpinner1.getValue();
             String q = String.valueOf(pr);
-            String x = ((JTextField)jDateChooser1.getDateEditor().getUiComponent()).getText();
+            String x = ((JTextField)jDateChooser.getDateEditor().getUiComponent()).getText();
             if(!x.equals("")){
                 tt = timer();
-                String da = x.substring(0,4)+x.substring(5,7)+x.substring(8,10)+q+tt;
+                String da = x+q+tt;
+//                if(x.charAt(6) == ','){
+//                    da = x.substring(0,3)+x.substring(4,6)+x.substring(8,12)+q+tt;
+//                }
+//                else{
+//                    da = x.substring(0,3)+x.substring(4,5)+x.substring(7,11)+q+tt;
+//                }
                 
                 
                 String ti;
@@ -313,7 +319,7 @@ public class AddMenu extends javax.swing.JFrame {
                     ptst.setInt(2,pr);
                     ptst.setString(3,ta);
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                    String date = sdf.format(jDateChooser1.getDate());
+                    String date = sdf.format(jDateChooser.getDate());
                     ptst.setString(4,date);
                     ptst.setString(5,ti);
                     ptst.setString(7,des);
@@ -321,7 +327,7 @@ public class AddMenu extends javax.swing.JFrame {
                     ptst.execute();
                     c.close();
                     c = DriverManager.getConnection("jdbc:mysql://localhost:3306/task","root","1234");
-                    sql = "Select *from account where username = '"+user+"'";
+                    sql = "Select * from account where username = '"+user+"'";
                     ptst = c.prepareStatement(sql);
                     ResultSet rs = ptst.executeQuery();
                     while(rs.next()){
@@ -405,7 +411,7 @@ public class AddMenu extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JComboBox<String> jComboBox1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private com.toedter.calendar.JDateChooser jDateChooser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -159,7 +159,7 @@ public class diaryy extends javax.swing.JFrame {
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 260, 80));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("E:\\2-2\\icons\\clkb.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/inner_main.jpg"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel6.setBackground(new java.awt.Color(51, 51, 51));
